@@ -1,0 +1,45 @@
+#root { min-height: 100vh; }
+.page-shell { max-width: 1180px; margin: 0 auto; padding: 0 42px; overflow: hidden; }
+.topbar { height: 88px; display: flex; align-items: center; gap: 28px; border-bottom: 1px solid #d8d6ce; }
+.brand-mark { display: flex; align-items: center; gap: 8px; color: #d75c42; font: 500 14px 'DM Mono', monospace; }
+.brand-mark i { width: 9px; height: 9px; display: block; background: #d75c42; border-radius: 50%; }
+.eyebrow, .status, .kicker, .product-category, .product-meta { font: 500 11px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+.eyebrow { color: #717a71; margin: 0; }
+.status { margin-left: auto; color: #717a71; display: flex; align-items: center; gap: 8px; }
+.status b { width: 6px; height: 6px; border-radius: 50%; background: #6d9a72; }
+.intro { padding: 92px 0 118px; max-width: 760px; }
+.kicker { color: #d75c42; margin: 0 0 16px; }
+ h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(48px, 7vw, 92px); line-height: .98; letter-spacing: -.07em; font-weight: 700; margin: 0 0 28px; }
+h1 em { color: #d75c42; font-style: normal; }
+.intro-copy { color: #6f776f; max-width: 470px; line-height: 1.75; font-size: 15px; }
+.lesson-grid { border-top: 1px solid #d8d6ce; padding: 34px 0 86px; }
+.section-heading { display: grid; grid-template-columns: 55px 1fr 200px; gap: 20px; align-items: start; margin-bottom: 28px; }
+.index { color: #d75c42; font: 500 12px 'DM Mono', monospace; }
+h2 { font-size: 38px; letter-spacing: -.06em; line-height: 1; margin: 0; }
+.section-note { color: #858a82; font-size: 12px; line-height: 1.5; margin: 4px 0 0; }
+.accordion-root { max-width: 780px; margin-left: 75px; border-top: 1px solid #bfc2b7; }
+.accordion-item { border-bottom: 1px solid #bfc2b7; }
+.accordion-header { width: 100%; border: 0; background: none; padding: 23px 0; display: flex; justify-content: space-between; align-items: center; text-align: left; cursor: pointer; color: #28312c; font-size: 17px; font-weight: 600; }
+.accordion-header:hover { color: #d75c42; }
+.accordion-icon { color: #d75c42; font: 400 25px 'DM Mono', monospace; }
+.accordion-panel { padding: 0 44px 23px 0; color: #6f776f; font-size: 14px; line-height: 1.75; }
+.accordion-panel p { margin: 0; max-width: 640px; }
+.accordion-panel strong { color: #28312c; }
+.products-section { padding-bottom: 50px; }
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-left: 75px; }
+.product-card { background: #ebe7dd; min-width: 0; }
+.product-art { aspect-ratio: 1 / 1.05; padding: 13px; color: rgba(255,255,255,.8); font: 11px 'DM Mono', monospace; }
+.product-info { padding: 17px 16px 18px; }
+.product-category { color: #d75c42; font-size: 9px; margin-bottom: 9px; }
+.product-info h3 { font-size: 14px; margin-bottom: 7px; letter-spacing: -.02em; }
+.product-meta { color: #8a8c83; font-size: 9px; margin-bottom: 16px; }
+.product-info strong { font: 500 12px 'DM Mono', monospace; }
+.pagination { margin: 26px 0 0 75px; display: flex; align-items: center; gap: 20px; font: 11px 'DM Mono', monospace; color: #8a8c83; }
+.pagination strong { color: #28312c; }
+.pagination button { border: 1px solid #c7c8bf; background: none; width: 34px; height: 34px; cursor: pointer; color: #28312c; }
+.pagination button:hover:not(:disabled) { border-color: #d75c42; color: #d75c42; }
+.pagination button:disabled { opacity: .35; cursor: not-allowed; }
+footer { border-top: 1px solid #d8d6ce; padding: 24px 0 35px; display: flex; gap: 18px; color: #858a82; font: 10px 'DM Mono', monospace; }
+footer span { color: #d75c42; } footer p { margin: 0; } footer p:last-child { margin-left: auto; }
+@media (max-width: 720px) { .page-shell { padding: 0 20px; } .topbar { gap: 14px; } .eyebrow { display: none; } .status { font-size: 9px; } .intro { padding: 65px 0 78px; } h1 { font-size: 54px; } .section-heading { grid-template-columns: 34px 1fr; gap: 12px; } .section-note { grid-column: 2; margin-top: -8px; } .accordion-root, .product-grid, .pagination { margin-left: 46px; } .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .product-info { padding: 12px; } .product-info h3 { font-size: 12px; } footer { flex-wrap: wrap; } footer p:last-child { margin-left: 0; width: 100%; } }
