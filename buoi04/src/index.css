@@ -1,0 +1,5 @@
+:root { font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; color: #6c6862; background: #f7f5f0; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; --ink: #252522; --muted: #8d8981; --line: #dedbd3; --panel: #ebe8e1; --coral: #de604c; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+#root { min-height: 100vh; }
+p { margin: 0; }
