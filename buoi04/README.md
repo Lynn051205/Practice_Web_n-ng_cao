@@ -1,5 +1,21 @@
 # React + TypeScript + Vite
 
+## Kiểm thử
+
+Project dùng Jest, Jest DOM và React Testing Library để kiểm thử Zustand store,
+tương tác giao diện, và service API bất đồng bộ. API service chỉ phục vụ minh họa
+và được mock trong test; giao diện hiện tại vẫn dùng danh sách sản phẩm tĩnh.
+
+```sh
+npm install
+npm test
+npm run test:coverage
+```
+
+Coverage được đo cho `src/stores/useFavoritesStore.ts`, với ngưỡng tối thiểu 70%
+cho statements, branches, functions và lines. Báo cáo HTML nằm tại
+`coverage/lcov-report/index.html`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
