@@ -1,5 +1,7 @@
 # BÁO CÁO BÀI TẬP TUẦN 6 – KIỂM THỬ FRONTEND
 
+> **Lưu ý:** Đây là báo cáo lịch sử cho phiên bản React + Vite của bài tập tuần 6. Dự án hiện đã chuyển sang Next.js cho bài tập tuần 8; kết quả kiểm thử mới nhất nằm tại [docs/testing-report.md](./docs/testing-report.md), còn so sánh Lighthouse tại [docs/performance-report.md](./docs/performance-report.md).
+
 ## 1. Thông tin bài tập
 
 | Nội dung | Thông tin |

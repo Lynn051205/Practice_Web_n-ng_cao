@@ -12,6 +12,16 @@ dist
 dist-ssr
 coverage
 *.local
+*.tsbuildinfo
+.next
+out
+.env
+.env.*
+!.env.example
+prisma/dev.db
+prisma/dev.db-journal
+prisma/dev.db-shm
+prisma/dev.db-wal
 
 # Editor directories and files
 .vscode/*

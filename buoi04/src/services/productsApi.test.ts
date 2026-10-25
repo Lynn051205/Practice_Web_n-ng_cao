@@ -60,4 +60,20 @@ describe('fetchProducts', () => {
       'Dữ liệu sản phẩm từ API không hợp lệ.',
     )
   })
+
+  it('báo lỗi khi một phần tử trong danh sách không có cấu trúc hợp lệ', async () => {
+    const fetchMock = jest.fn(async () =>
+      response([{ id: 'invalid', name: 'Missing product fields' }], true, 200),
+    )
+
+    await expect(fetchProducts(fetchMock)).rejects.toThrow(
+      'Dữ liệu sản phẩm từ API không hợp lệ.',
+    )
+  })
+
+  it('chấp nhận danh sách rỗng', async () => {
+    const fetchMock = jest.fn(async () => response([], true, 200))
+
+    await expect(fetchProducts(fetchMock)).resolves.toEqual([])
+  })
 })

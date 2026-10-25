@@ -32,6 +32,15 @@ describe('useFavoritesStore', () => {
     expect(useFavoritesStore.getState().products).toEqual([])
   })
 
+  it('xóa toàn bộ sản phẩm yêu thích', () => {
+    useFavoritesStore.getState().addFavorite(tumbler)
+    useFavoritesStore.getState().addFavorite(backpack)
+
+    useFavoritesStore.getState().clearFavorites()
+
+    expect(useFavoritesStore.getState().products).toEqual([])
+  })
+
   it('thêm một sản phẩm vào danh sách yêu thích', () => {
     useFavoritesStore.getState().addFavorite(tumbler)
 

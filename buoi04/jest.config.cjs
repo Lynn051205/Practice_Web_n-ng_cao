@@ -1,25 +1,11 @@
-/** @type {import('jest').Config} */
-module.exports = {
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({ dir: './' })
+
+const customJestConfig = {
   testEnvironment: 'jsdom',
   testMatch: ['<rootDir>/src/**/*.test.(ts|tsx)'],
   setupFilesAfterEnv: ['<rootDir>/src/testSetup.ts'],
-  transform: {
-    '^.+\\.tsx?$': [
-      'ts-jest',
-      {
-        tsconfig: {
-          jsx: 'react-jsx',
-          module: 'CommonJS',
-          moduleResolution: 'Node',
-          esModuleInterop: true,
-          allowSyntheticDefaultImports: true,
-          allowArbitraryExtensions: true,
-          verbatimModuleSyntax: false,
-          types: ['vite/client', 'jest'],
-        },
-      },
-    ],
-  },
   moduleNameMapper: {
     '\\.css$': '<rootDir>/src/testStyleMock.cjs',
   },
@@ -35,3 +21,5 @@ module.exports = {
     },
   },
 }
+
+module.exports = createJestConfig(customJestConfig)

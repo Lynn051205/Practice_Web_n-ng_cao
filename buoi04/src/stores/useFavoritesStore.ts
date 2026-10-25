@@ -7,12 +7,15 @@ export interface Product {
   price: number
   color: string
   accent: string
+  image?: string
+  description?: string
 }
 
 interface FavoritesState {
   products: Product[]
   addFavorite: (product: Product) => void
   removeFavorite: (productId: number) => void
+  clearFavorites: () => void
   isFavorite: (productId: number) => boolean
   toggleFavorite: (product: Product) => void
 }
@@ -29,6 +32,7 @@ export const useFavoritesStore = create<FavoritesState>((set, get) => ({
     set((state) => ({
       products: state.products.filter((product) => product.id !== productId),
     })),
+  clearFavorites: () => set({ products: [] }),
   isFavorite: (productId) =>
     get().products.some((product) => product.id === productId),
   toggleFavorite: (product) => {

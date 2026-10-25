@@ -1,4 +1,5 @@
 import type { Product } from '../stores/useFavoritesStore'
+import { productsSchema } from '../lib/validations/product'
 
 interface JsonApiResponse {
   ok: boolean
@@ -18,9 +19,10 @@ export async function fetchProducts(
   }
 
   const products: unknown = await response.json()
-  if (!Array.isArray(products)) {
+  const parsed = productsSchema.safeParse(products)
+  if (!parsed.success) {
     throw new Error('Dữ liệu sản phẩm từ API không hợp lệ.')
   }
 
-  return products as Product[]
+  return parsed.data satisfies Product[]
 }
